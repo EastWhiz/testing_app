@@ -25,3 +25,8 @@ Route::post('/register', "App\Http\Controllers\AuthController@StoreUser")->name(
 
 Route::get('/home', "App\Http\Controllers\HomeController@index")->name("home");
 Route::post('/home', "App\Http\Controllers\HomeController@index")->name("home_sent");
+
+//Socket Server
+Route::get("socket", "App\Http\Controllers\SocketController@server");
+Route::get("save-socket", "App\Http\Controllers\SocketController@SaveSocket");
+Route::get("get-socket", "App\Http\Controllers\SocketController@GetSocket");
